@@ -6,17 +6,26 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./flatpak.nix
-      ./system/services.nix
-      ./system/packages.nix
+
+      # Core
+      ./system/core/services.nix
+      ./system/core/sysconf.nix
+
+      # Packages
+      ./system/packages/flatpak.nix
+      ./system/packages/packages.nix
+
     ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable auto update with switch (minus kernel udpates reoobt needed)
+  # Default update intervals
   system.autoUpgrade.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
