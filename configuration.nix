@@ -9,6 +9,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./flatpak.nix
+      ./system/services.nix
+      ./system/packages.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -53,83 +55,8 @@
     powerOnBoot = true;
   };
 
-  hardware.steam-hardware.enable = true; # enables steam udev rules for controllers and other input devices
-
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-
-  # SDD trimming enable
-  services.fstrim.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "hu";
-    variant = "";
-  };
-
   # Configure console keymap
   console.keyMap = "hu";
-
-  #TODO create seperate file for serivces?
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    # jack.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
-
-  ### FLatpak setup
-  services.flatpak.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."dave" = {
-    isNormalUser = true;
-    description = "dave";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-      thunderbird
-    ];
-  };
-
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-     #command line
-     git
-     vim
-     wget
-     lm_sensors
-     htop
-     flutter
-
-     #graphical
-     vscode
-     godot
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
