@@ -1,4 +1,5 @@
 { config, pkgs, ... }:
+
 {
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -7,7 +8,6 @@
   # Enable auto update with switch (minus kernel udpates reoobt needed)
   # Default update intervals
   system.autoUpgrade.enable = true;
-
 
   # Set your time zone.
   time.timeZone = "Europe/Budapest";
@@ -27,16 +27,7 @@
     LC_TIME = "hu_HU.UTF-8";
   };
 
-  ### Hardware configs
-
-  #TODO double check if it worked, bluethotth should work in this case
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-
   # Configure console keymap
   console.keyMap = "hu";
-
 
 }

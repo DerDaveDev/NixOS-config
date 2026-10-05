@@ -12,17 +12,19 @@
       ./hardware_settings.nix
 
       # Core
+      ./system/core/system_config.nix
       ./system/core/services.nix
-      ./system/core/sysconf.nix
       ./system/core/networking.nix
+      #./system/core/environment.nix
 
       # Packages
       ./system/packages/flatpak.nix
       ./system/packages/packages.nix
+      # TODO Ollama
 
       # Desktop
       ./system/desktop_environment/kde.nix
-
+      # TODO try Gnome
     ];
 
   # Copy the NixOS configuration file and link it from the resulting system

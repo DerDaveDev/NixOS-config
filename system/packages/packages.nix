@@ -12,16 +12,16 @@
         ];
     };
 
-    # Install firefox.
-    programs.firefox.enable = true;
-
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
+
+    # Install firefox.
+    programs.firefox.enable = true;
 
     # List packages installed in system profile.
     # You can use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs; [
-        #command line
+        # Command line
         git
         vim
         wget
@@ -29,7 +29,7 @@
         htop
         flutter
 
-        #graphical
+        # Graphical
         vscode
         godot
     ];
