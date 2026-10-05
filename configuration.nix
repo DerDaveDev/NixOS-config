@@ -20,6 +20,9 @@
       ./system/packages/flatpak.nix
       ./system/packages/packages.nix
 
+      # Desktop
+      ./system/desktop_environment/kde.nix
+
     ];
 
   # Copy the NixOS configuration file and link it from the resulting system
