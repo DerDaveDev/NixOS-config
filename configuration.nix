@@ -48,7 +48,7 @@
   #TODO double check if it worked, bluethotth should work in this case
   hardware.bluetooth = {
     enable = true;
-    powerOnBoot = false;
+    powerOnBoot = true;
   };
 
   hardware.steam-hardware.enable = true; # enables steam udev rules for controllers and other input devices
@@ -116,18 +116,18 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
+     #command line
      git
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+     vim
      wget
      lm_sensors
      htop
+     flutter
+
+     #graphical
+     vscode
+     godot
   ];
-
-  environment.etc."gitconfig".text = ''
-    [safe]
-    directory = /etc/nixos
-  '';
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
