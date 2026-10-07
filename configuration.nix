@@ -20,6 +20,7 @@
       # Packages
       ./system/packages/flatpak.nix
       ./system/packages/packages.nix
+      ./system/packages/appimage_config.nix
       # TODO Ollama
 
       # Desktop
