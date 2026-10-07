@@ -8,7 +8,7 @@
   imports =
     [
       # Hardware
-      ./hardware-configuration.nix #Include the results of the hardware scan
+      ./hardware-configuration.nix # Include the results of the hardware scan
       ./hardware_settings.nix
 
       # Core

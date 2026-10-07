@@ -28,9 +28,12 @@
         lm_sensors
         htop
         flutter
+        dmidecode
 
         # Graphical
         vscode
         godot
+        antigravity
+        gitnuro
     ];
 }

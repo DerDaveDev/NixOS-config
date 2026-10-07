@@ -8,8 +8,9 @@ let
     "org.libreoffice.LibreOffice"
     "io.github.edewin.corex" # GPU and CPU temp monitor tool
     "com.valvesoftware.Steam"
-    "com.jetpackduba.Gitnuro"
+    #"com.jetpackduba.Gitnuro"
     "com.discordapp.Discord"
+    "com.jeffser.Alpaca"
   ];
 in {
   system.userActivationScripts.flatpakManagement = {

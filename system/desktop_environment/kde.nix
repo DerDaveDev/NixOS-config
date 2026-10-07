@@ -2,8 +2,9 @@
 
 {
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
 
-  #todo panel on top
+  #services.displayManager.gdm.enable = true;
+  #services.desktopManager.gnome.enable = true;
 }
