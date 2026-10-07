@@ -10,6 +10,7 @@
       # Hardware
       ./hardware/hardware-configuration.nix # Include the results of the hardware scan
       ./hardware/hardware_settings.nix
+      ./hardware/swap.nix
 
       # Core
       ./system/core/system_config.nix
