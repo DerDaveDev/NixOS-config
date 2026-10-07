@@ -9,7 +9,7 @@
     # This lets you execute AppImages directly (./app.AppImage) or via a file manager.
     binfmt = true;
 
-package = pkgs.appimage-run.override {
+    package = pkgs.appimage-run.override {
       extraPkgs = pkgs: with pkgs; [
         # Legacy & System Compatibility
         icu
@@ -54,8 +54,7 @@ package = pkgs.appimage-run.override {
         gdk-pixbuf
         at-spi2-atk
       ];
-    };
-
+    }; #package = pkgs.appimage-run.override
   }; # programs.appimage
 
   # Make the CLI runner available system-wide

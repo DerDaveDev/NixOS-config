@@ -8,8 +8,8 @@
   imports =
     [
       # Hardware
-      ./hardware-configuration.nix # Include the results of the hardware scan
-      ./hardware_settings.nix
+      ./hardware/hardware-configuration.nix # Include the results of the hardware scan
+      ./hardware/hardware_settings.nix
 
       # Core
       ./system/core/system_config.nix
@@ -24,8 +24,7 @@
       # TODO Ollama
 
       # Desktop
-      ./system/desktop_environment/kde.nix
-      # TODO try Gnome
+      ./system/desktop_environment/kde.nix #TODO rename it to active_desktop.nix and set up gnome as a option
     ];
 
   # Copy the NixOS configuration file and link it from the resulting system

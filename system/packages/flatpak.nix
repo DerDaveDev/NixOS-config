@@ -11,6 +11,7 @@ let
     #"com.jetpackduba.Gitnuro"
     "com.discordapp.Discord"
     "com.jeffser.Alpaca"
+    "com.notepadqq.Notepadqq"
   ];
 in {
   system.userActivationScripts.flatpakManagement = {
