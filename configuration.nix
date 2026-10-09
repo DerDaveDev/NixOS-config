@@ -10,23 +10,25 @@
       # Hardware
       ./hardware/hardware-configuration.nix # Include the results of the hardware scan
       ./hardware/hardware_settings.nix
+      ./hardware/boot.nix
       ./hardware/swap.nix
 
-      # Core
-      ./system/core/system_config.nix
-      ./system/core/services.nix
-      ./system/core/networking.nix
+      # System
+      ./system/services.nix
+      ./system/xserver.nix
+
+      ## Core
       ./system/core/audio.nix
       ./system/core/localization.nix
-      ./system/core/xserver.nix
+      ./system/core/networking.nix
 
-      # Packages
+      ## Packages
       ./system/packages/flatpak.nix
       ./system/packages/packages.nix
       ./system/packages/appimage_config.nix
       # TODO Ollama
 
-      # Desktop
+      ## Desktop
       ./system/desktop_environment/kde.nix #TODO rename it to active_desktop.nix and set up gnome as a option
     ];
 

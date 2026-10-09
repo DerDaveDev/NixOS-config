@@ -45,7 +45,7 @@ in {
         # com.valvesoftware.Steam
 
         # 7. Remove unused Flatpaks
-        ${pkgs.flatpak}/bin/flatpak uninstall --unused -y
+        # ${pkgs.flatpak}/bin/flatpak uninstall --unused -y
 
         # 8. Update all installed Flatpaks
         ${pkgs.flatpak}/bin/flatpak update -y
