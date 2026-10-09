@@ -16,7 +16,9 @@
       ./system/core/system_config.nix
       ./system/core/services.nix
       ./system/core/networking.nix
-      #./system/core/environment.nix
+      ./system/core/audio.nix
+      ./system/core/localization.nix
+      ./system/core/xserver.nix
 
       # Packages
       ./system/packages/flatpak.nix

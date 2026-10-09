@@ -12,6 +12,7 @@ let
     "com.discordapp.Discord"
     "com.jeffser.Alpaca"
     "com.notepadqq.Notepadqq"
+    "org.kde.kolourpaint"
   ];
 in {
   system.userActivationScripts.flatpakManagement = {

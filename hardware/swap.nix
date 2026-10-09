@@ -12,7 +12,7 @@
 
     # How much of your physical RAM can be used for zram
     # if there is a lot of idle memory useage than higher number is recommended
-    # in case lot of memory is used at once so there is acitvity it is better to stick to mid/low mid ranges due to memory pressure
+    # in case lot of memory usage  acitvity it is better to set config to mid/low mid ranges due to memory pressure
     memoryPercent = 60;
 
     # Compression algorithm: "zstd" provides good compression ratio
